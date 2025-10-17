@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>ZakApps-Foods</title>
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+
+      <!-- Navbar -->
+    <nav>
+        <div class="nav_left">
+            <img src="../Assets/logo_zak.svg" alt="Logo" width="70px" height="50px"/>
+            <p>Zaks<span class="nav-highlight">Apps</span></p>
+        </div>
+
+        <div class="nav_links">
+            <ul >
+                <!-- nav links -->
+                <li>
+                    <a href="index.html">Home</a>
+                </li>
+                <li>
+                    <a href="index.html">Products</a>
+                </li>
+                <li>
+                    <a href="index.html">Contact</a>
+                </li>
+
+                
+            </ul>
+        </div>
+
+        <!-- Login button --> 
+        <div class="btn-nav">
+                <button> Login</button>
+                <button>Register</button>
+        </div>
+
+    </nav>
+
+    <!-- Header  -->
+
+    <header class="products-header">
+      <div class="banner-contant">
+        <p>How to Make</p>
+        <h1>
+          Delicious Pizza
+        </h1>
+      </div>
+      <div class="banner">
+         <img  src="../Assets/bannerP.png" alt="This is  a banner of products" width="100%" height="400px"/> 
+      </div>
+    </header>
+
+    <!-- Main for Filter & Products -->
+    <main class="products-Container">
+
+      <section class="filters-contaner">
+        <h3>Filter & Sort</h3>
+
+        <div class="filters">
+        <div class="search">
+          <label for="search">Search</label>
+          <input type="text" placeholder="Search Food" id="search" name="search"/>
+        </div>
+
+        <div class="filter-block">
+          <label>Rating :</label>
+          <select id="rating-filter">
+            <option value="0">All rating</option>
+            <option value="4">4 ⭐ & up </option>
+            <option value="3">3 ⭐ & up</option>
+          </select>
+        </div>
+
+        <div class="filter-block  checkblock">
+          <label>Type : </label>
+          <div>
+            <label><input type="checkbox" class="filter-check" value="single" checked/>Single</label>
+          </div>
+
+          <div>
+            <label><input type="checkbox" class="filter-check" value="multi" checked/>Multi</label>
+          </div>
+        </div>
+
+        <div class="filter-block">
+          <label>Sort By :</label>
+          <select id="sort-filter">
+            <option value="feature">Features</option>
+            <option value="price-asc">Price : Low -> High</option>
+            <option value="price-desc">Price : High -> Low</option>
+            <option value="rating-desc">Rating</option>
+          </select>
+        </div>
+
+        <div class="filter-action">
+          <button id="apply-filter" class="apply-btn">Apply</button>
+          <button id="clear-filter" class="cle-btn">Clear</button>
+        </div>
+      
+       </div>
+      </section>
+
+      <section class="products-List">
+          <h2>Products</h2>
+
+        <div id="result-info" class="results">
+
+        </div>
+
+
+        <div id="products-grid" class="products">
+            
+        </div>
+      </section>
+
+    </main>
+
+    <!-- Footer -->
+
+    <footer>
+        <div class="footer_links">
+            <h3>Links</h3>
+            <ul>
+                <li>
+                    <a href="index.html">Home</a>
+                </li>
+                <li>
+                    <a href="products.html">Products</a>
+                </li>
+                <li>
+                    <a href="#c2">Contact</a>
+                </li>
+                <li>
+                    <a href="#">FAQs</a>
+                </li>
+                <li>
+                    <a href="#">Customer Service</a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="info">
+            <h3>Information </h3>
+            <p>Terms of Service</p>
+            <p>Refund Policy</p>
+            <p>News</p>
+        </div>
+
+        <div class="contact_links">
+            <h3 id="c2">Contact</h3>
+            <img src="../Assets/insta.png" width="50px" height="50px">
+            <img src="../Assets/twit.png" width="50px" height="50px">
+            <img src="../Assets/whatsapp.png" width="50px" height="50px">
+        </div>
+    </footer>
+   
+
+  <script src="../Data/products.js"></script>
+  <script src="../js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>ZakApps — Order Placed</title>
+   <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+
+    <!-- Nav bar  -->
+  <nav>
+    <div class="nav_left">
+      <img src="../Assets/logo_zak.svg" width="70px" height="50px"/>
+      <p>Zaks<span class="nav-highlight">Apps</span></p>
+    </div>
+
+    <div class="nav_links">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+
+    <div class="btn-nav">
+      <div class="cart" id="cart-order">
+        <button>
+                  🛒 <span id="cart-count-order">0</span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main for order placed -->
+  <main class="container page order-placed">
+    <div class="order-card glass">
+      <h1>Order Placed</h1>
+      <p class="lead">Thank you! Your order has been placed successfully.</p>
+      <p id="order-details" class="muted"></p>
+      <div class="actions">
+        <a href="products.html" class="btn">Continue Shopping</a>
+        <button id="clear-cart" class="btn alt">Clear Cart</button>
+      </div>
+    </div>
+  </main>
+
+
+  <script>
+    // show cart count
+    document.getElementById('cart-count-order').textContent = localStorage.getItem('zak_card_count') || 0;
+    // populate basic order details if any
+    const lastOrder = JSON.parse(localStorage.getItem('zak_last_order') || 'null');
+    document.getElementById('order-details').textContent = lastOrder ? `Placed id : ${lastOrder.id} / Item: ${lastOrder.name}` : '';
+    document.getElementById('clear-cart').addEventListener('click', () => {
+      localStorage.removeItem('zak_card_count');
+      alert('Cart cleared');
+      document.getElementById('cart-count-order').textContent = 0;
+    });
+  </script>
+</body>
+</html>
